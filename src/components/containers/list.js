@@ -9,7 +9,8 @@ import Config from '../../config/config';
 import {Dump} from '../../helpers/development';
 
 //Components
-import Loading from '../ui/loading'
+import Loading from '../ui/loading';
+import listItem from '../ui/listItem';
 
 
 export default React.createClass({
@@ -38,23 +39,30 @@ export default React.createClass({
 
 		return (
 			<div>
-				<h2>Awesome Post list</h2>
+				<h2>Post List</h2>
 				<ul>
 					{
 						this.state.list.map((post)=>{
 							return(
 								<li key={post.id}>
-									<Link to={{pathname:'post/' + post.slug, state:{post: post}}} > View me</Link>
-									I am a list item, build me at src/components/ui/listItem.js 
-									<br/> {Dump(post)}
+									<Link to={{pathname:'post/' + post.slug, state:{post: post}}} >
+									{/*I am a list item, build me at src/components/ui/listItem.js
+									<br/> {Dump(post)}*/}
+
+									<h3>{post.title.rendered}</h3>
+
+									<div dangerouslySetInnerHTML={{__html: post.excerpt.rendered}} />
+
+									</Link>
 								</li>
 							)
 						})
 					}
+					<listItem props={this.state.list}/>
 				</ul>
 			</div>
 		)
-		
+
 	}
 
 })
