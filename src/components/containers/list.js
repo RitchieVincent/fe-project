@@ -39,7 +39,7 @@ export default React.createClass({
 
 		return (
 			<div>
-				<h2>Post List</h2>
+				<h2>Posts</h2>
 				<ul>
 					{
 						this.state.list.map((post)=>{

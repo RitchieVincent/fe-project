@@ -9,6 +9,8 @@ import RouterStateMixin from '../../mixins/router-state'
 
 import Loading from '../ui/loading';
 
+import Page from '../ui/page';
+
 export default React.createClass({
 	mixins:[RouterStateMixin],
 	getInitialState(){
@@ -46,12 +48,10 @@ export default React.createClass({
 		}
 
 		return(
-			<div>
-				<p>I am a Page ({this.props.routeParams.page})</p>
-				<p>Build my ui component at src/components/ui/page.js</p>
-				<p>Data:</p> 
-				{Dump(this.state.page)}
-			</div>
+			// 	{Dump(this.state.page)}
+		
+
+			<Page data={this.state.page}/>
 		)
 	}
 })

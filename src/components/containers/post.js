@@ -44,7 +44,8 @@ export default React.createClass({
 			<div>
 				<p>I am a Post ({this.props.routeParams.post})</p>
 					<p>Build my ui component at src/components/ui/post.js</p>
-					<p>Data:</p> 
+					<p>Data:</p>
+				
 					{Dump(this.state.post)}
 				<Comments id={this.state.post.id}/>
 			</div>

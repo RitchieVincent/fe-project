@@ -36,7 +36,7 @@ export default React.createClass({
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col-md-12">
-						<h1 className="text-center text-uppercase">Group Project 2</h1>
+						{/*<h1 className="text-center text-uppercase">Group Project 2</h1>*/}
 					</div>
 				</div>
 				<div className="row">
