@@ -1,0 +1,29 @@
+.page {
+
+	.title {
+		text-align: center;
+	}
+
+	.content {
+		padding: 20px;
+
+		background-color: #eee;
+		border: 1px solid #ccc;
+
+		font-size: 18px;
+	}
+
+	.date {
+		float: right;
+		padding: 10px 20px;
+
+		background-color: #e6e6e6;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+
+		text-align: right;
+		font-size: 10px;
+	}
+
+}
